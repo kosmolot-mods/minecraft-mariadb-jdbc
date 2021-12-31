@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
-  "id": "mysql-jdbc",
+  "id": "mariadb-jdbc",
   "version": "${version}",
-  "name": "MySQL JDBC",
-  "description": "MySQL JDBC Driver for Fabric and Forge",
+  "name": "MariaDB JDBC",
+  "description": "MariaDB JDBC Driver for Fabric and Forge",
   "authors": [
-    "Oracle Corporation",
+    "MariaDB Corporation Ab.",
     "Kosmolot"
   ],
   "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/mysql-jdbc",
-    "sources": "https://github.com/kosma/mysql-jdbc-mod",
-    "issues": "https://github.com/kosma/mysql-jdbc-mod/issues"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/mariadb-jdbc",
+    "sources": "https://github.com/kosma/mariadb-jdbc-mod",
+    "issues": "https://github.com/kosma/mariadb-jdbc-mod/issues"
   },
-  "license": "GPLv2 with FOSS Exception",
+  "license": "LGPLv2.1",
   "icon": "icon.png"
 }
