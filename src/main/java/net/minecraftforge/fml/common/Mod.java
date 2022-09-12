@@ -20,4 +20,5 @@ import java.lang.annotation.Target;
 public @interface Mod {
     String modid();
     String value();
+    String acceptableRemoteVersions();
 }
