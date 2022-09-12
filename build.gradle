@@ -31,7 +31,7 @@ shadowJar {
     dependencies {
         include(dependency("${project.library_maven_name}:.*"))
     }
-    exclude('net')
+    exclude('net.minecraftforge.fml.common')
 }
 
 jar.finalizedBy('shadowJar')
