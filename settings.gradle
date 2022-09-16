@@ -1,1 +1,14 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven { url = 'https://maven.minecraftforge.net/' }
+    }
+}
+
 rootProject.name = 'mariadb-jdbc'
+
+include 'fabric'
+include 'forge-1.12'
+include 'forge-1.13'
+include 'forge-1.17'
+include 'spigot'

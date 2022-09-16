@@ -1,0 +1,16 @@
+plugins {
+    id 'net.minecraftforge.gradle' version '5.1.+'
+}
+
+java {
+    archivesBaseName = "${rootProject.name}-${project.name}"
+    toolchain.languageVersion = JavaLanguageVersion.of(17)
+}
+
+minecraft {
+    mappings channel: 'official', version: '1.17.1'
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.17.1-37.1.1'
+}

@@ -1,41 +1,38 @@
 plugins {
-    id "com.github.johnrengelman.shadow" version "7.1.2"
     id "java"
+    id "com.github.johnrengelman.shadow" version "7.1.2"
 }
 
-repositories {
-    mavenCentral()
-    maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
-    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
-    maven { url 'https://oss.sonatype.org/content/repositories/central' }
-}
-
-group = 'pl.kosma' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = 'pl.kosma'
 archivesBaseName = "${project.library_name}"
 version = "${project.library_version}+${project.release_date}"
 
-sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(17)
+}
+repositories {
+    mavenCentral()
+}
 
 dependencies {
     implementation "${project.library_maven_name}:${project.library_version}"
-    implementation 'org.spigotmc:spigot-api:1.12-R0.1-SNAPSHOT'
-}
-
-processResources {
-    filesMatching(['fabric.mod.json', 'mcmod.info', 'META-INF/mods.toml']) {
-        expand "version": project.version
-    }
-}
-
-jar {
-    exclude('net')
+    implementation(project(":fabric")) { transitive = false }
+    implementation(project(":forge-1.12")) { transitive = false }
+    implementation(project(":forge-1.13")) { transitive = false }
+    implementation(project(":forge-1.17")) { transitive = false }
+    implementation(project(":spigot")) { transitive = false }
 }
 
 shadowJar {
     dependencies {
         include(dependency("${project.library_maven_name}:.*"))
+        include(project(":fabric"))
+        include(project(":forge-1.12"))
+        include(project(":forge-1.13"))
+        include(project(":forge-1.17"))
+        include(project(":spigot"))
     }
-    exclude('net.minecraftforge.fml.common')
+    exclude('net')
 }
 
 jar.finalizedBy('shadowJar')

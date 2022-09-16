@@ -1,0 +1,7 @@
+name: mariadb-jdbc
+main: pl.kosma.mariadb_jdbc.SpigotPlugin
+description:  MariaDB JDBC Driver
+author: Kosma Moczek <kosma@kosma.pl>
+website: https://www.curseforge.com/minecraft/mc-mods/mariadb-jdbc
+version: ${version}
+api-version: 1.12

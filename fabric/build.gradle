@@ -1,0 +1,14 @@
+plugins {
+    id "java"
+}
+
+java {
+    archivesBaseName = "${rootProject.name}-${project.name}"
+    toolchain.languageVersion = JavaLanguageVersion.of(8)
+}
+
+processResources {
+    filesMatching(['fabric.mod.json']) {
+        expand "version": rootProject.version
+    }
+}

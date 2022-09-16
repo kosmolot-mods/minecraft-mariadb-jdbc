@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "mariadb-jdbc",
+  "version": "${version}",
+  "name": "MariaDB JDBC",
+  "description": "MariaDB JDBC Driver for Fabric and Forge",
+  "authors": [
+    "MariaDB Corporation Ab.",
+    "Kosmolot"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/mariadb-jdbc",
+    "sources": "https://github.com/kosma/mariadb-jdbc-mod",
+    "issues": "https://github.com/kosma/mariadb-jdbc-mod/issues"
+  },
+  "license": "LGPLv2.1",
+  "icon": "icon.png"
+}
