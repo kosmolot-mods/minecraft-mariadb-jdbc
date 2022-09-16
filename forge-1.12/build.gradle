@@ -8,6 +8,6 @@ java {
 }
 
 jar {
-    // Exclude the fake @Mod annotation class. Obviously.
+    // Exclude mocked net.minecraftforge.
     exclude('net')
 }
