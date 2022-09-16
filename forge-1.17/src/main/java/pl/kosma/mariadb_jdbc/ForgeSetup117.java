@@ -1,5 +1,6 @@
 package pl.kosma.mariadb_jdbc;
 
+import java.lang.Record;
 import net.minecraftforge.fml.IExtensionPoint;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fmllegacy.network.FMLNetworkConstants;

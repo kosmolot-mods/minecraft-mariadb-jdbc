@@ -1,16 +1,24 @@
 plugins {
-    id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'java'
 }
 
 java {
     archivesBaseName = "${rootProject.name}-${project.name}"
-    toolchain.languageVersion = JavaLanguageVersion.of(17)
+    toolchain.languageVersion = JavaLanguageVersion.of(8)
 }
 
-minecraft {
-    mappings channel: 'official', version: '1.17.1'
+repositories {
+    mavenCentral()
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.17.1-37.1.1'
+    implementation 'org.apache.logging.log4j:log4j-api:2.15.0'
+    implementation 'org.apache.logging.log4j:log4j-core:2.15.0'
+}
+
+jar {
+    // Exclude mocked net.minecraftforge.
+    exclude('net')
+    // Exclude mocked java.lang.Record.
+    exclude('java')
 }
