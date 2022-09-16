@@ -6,3 +6,8 @@ java {
     archivesBaseName = "${rootProject.name}-${project.name}"
     toolchain.languageVersion = JavaLanguageVersion.of(8)
 }
+
+jar {
+    // Exclude the fake @Mod annotation class. Obviously.
+    exclude('net')
+}

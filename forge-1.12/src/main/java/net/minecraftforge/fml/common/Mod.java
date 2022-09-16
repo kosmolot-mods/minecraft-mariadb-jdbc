@@ -12,8 +12,8 @@ import java.lang.annotation.Target;
  * (and hours of waiting) and the PAIN of Forge doing its bad
  * heuristics to block the mod from being universal.
  *
- * Of course, this package package is later excluded from
- * build on the jar stage.
+ * Of course, this package is later excluded from the build
+ * on the jar stage.
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)

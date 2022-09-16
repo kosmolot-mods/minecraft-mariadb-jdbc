@@ -36,7 +36,6 @@ shadowJar {
         include(project(":forge-1.17"))
         include(project(":spigot"))
     }
-    exclude('net')
 }
 
 jar.finalizedBy('shadowJar')
