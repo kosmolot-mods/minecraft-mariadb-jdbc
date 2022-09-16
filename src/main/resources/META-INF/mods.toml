@@ -11,3 +11,4 @@ displayURL="https://www.curseforge.com/minecraft/mc-mods/${mod_slug}"
 logoFile="icon.png"
 authors="${mod_vendor}, ${mod_author}"
 description='''${mod_description}'''
+displayTest="IGNORE_ALL_VERSION"
