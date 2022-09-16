@@ -6,7 +6,7 @@ import net.minecraftforge.fml.common.Mod;
 public class ForgeMod112
 {
     public ForgeMod112() {
-        try { Class.forName("ForgeSetup113").getDeclaredConstructor().newInstance(); } catch (Exception e) {}
-        try { Class.forName("ForgeSetup117").getDeclaredConstructor().newInstance(); } catch (Exception e) {}
+        try { Class.forName("pl.kosma.mariadb_jdbc.ForgeSetup113").getDeclaredConstructor().newInstance(); } catch (Exception e) {}
+        try { Class.forName("pl.kosma.mariadb_jdbc.ForgeSetup117").getDeclaredConstructor().newInstance(); } catch (Exception e) {}
     }
 }
