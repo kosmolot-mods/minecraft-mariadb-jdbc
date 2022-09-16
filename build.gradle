@@ -30,6 +30,7 @@ processResources {
 
 shadowJar {
     dependencies {
+        exclude("META-INF/versions/**") // can't have any classes higher than Java 8
         include(dependency("${project.library_maven_name}:.*"))
         include(project(":forge-1.12"))
         include(project(":forge-1.13"))
