@@ -16,17 +16,21 @@ repositories {
 
 dependencies {
     implementation "${project.library_maven_name}:${project.library_version}"
-    implementation(project(":fabric")) { transitive = false }
     implementation(project(":forge-1.12")) { transitive = false }
     implementation(project(":forge-1.13")) { transitive = false }
     implementation(project(":forge-1.17")) { transitive = false }
     implementation(project(":spigot")) { transitive = false }
 }
 
+processResources {
+    filesMatching(['fabric.mod.json', 'plugin.yml', 'mcmod.info', 'META-INF/mods.toml', 'pack.mcmeta']) {
+        expand project.properties
+    }
+}
+
 shadowJar {
     dependencies {
         include(dependency("${project.library_maven_name}:.*"))
-        include(project(":fabric"))
         include(project(":forge-1.12"))
         include(project(":forge-1.13"))
         include(project(":forge-1.17"))

@@ -6,13 +6,3 @@ java {
     archivesBaseName = "${rootProject.name}-${project.name}"
     toolchain.languageVersion = JavaLanguageVersion.of(8)
 }
-
-processResources {
-    filesMatching(['mcmod.info', 'META-INF/mods.toml']) {
-        expand "version": rootProject.version
-    }
-}
-
-tasks.withType(JavaCompile).configureEach {
-    options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
-}

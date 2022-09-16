@@ -17,9 +17,3 @@ java {
 dependencies {
     implementation 'org.spigotmc:spigot-api:1.12-R0.1-SNAPSHOT'
 }
-
-processResources {
-    filesMatching(['plugin.yml']) {
-        expand "version": rootProject.version
-    }
-}
