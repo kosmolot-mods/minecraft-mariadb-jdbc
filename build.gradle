@@ -8,7 +8,7 @@ archivesBaseName = "${project.library_name}"
 version = "${project.library_version}+${project.release_date}"
 
 java {
-    toolchain.languageVersion = JavaLanguageVersion.of(17)
+    toolchain.languageVersion = JavaLanguageVersion.of(8)
 }
 repositories {
     mavenCentral()
